@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
 	<title>Phaser</title>
+  <style>
+    html, body {
+      margin: 0;
+    }
+  </style>
     <script src="../phaser.min.js"></script>
     <script src="js/Boot.js"></script>
     <script src="js/Preloader.js"></script>
@@ -15,7 +20,7 @@
     <script src="js/Result.js"></script>
 </head>
 <body>
-	<div id="game" style="height: 603px;"></div>
+	<div id="game" style="height: 603px;overflow: hidden;"></div>
   <script>
     var game = new Phaser.Game(750, 1206, Phaser.CANVAS, 'game');
     game.state.add('Boot', MyGame.Boot);
@@ -25,7 +30,9 @@
     game.state.add('Rank', MyGame.Rank);
     game.state.add('Game', MyGame.Game);
     game.state.add('Result', MyGame.Result);
-    game.state.start('Boot');
+    // setTimeout(() => {
+      game.state.start('Boot');
+    // }, 500);
   </script>
 </body>
 </html>

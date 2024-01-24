@@ -4,7 +4,13 @@ MyGame.Preloader.prototype = {
     create:function(){
         this.load.onFileComplete.add(this.fileComplete, this);
         this.load.onLoadComplete.add(this.loadComplete, this);
-        this.text = this.add.text(this.world.width/2, this.world.height/2-50, '', { fill: '#fff' });
+        // this.text = this.add.text(this.world.width/2, this.world.height/2-50, '', { fill: '#fff' });
+        this.text = this.add.text(100, 300, '', { fill: '#fff' });
+
+		// this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		// this.scale.pageAlignHorizontally = true;
+		// this.scale.pageAlignVertically = true;
+
         this.text.anchor.set(0.5);
         this.start();
     },
@@ -33,7 +39,7 @@ MyGame.Preloader.prototype = {
     	this.load.image('lou_1','assets/lou_1.png');
     	this.load.image('lou_2','assets/lou_2.png');
     	this.load.atlas('ico', 'assets/ico.png?4', 'assets/ico.json?4');
-    	this.load.atlasJSONHash('player', 'assets/player_json.png', 'assets/player_json.json');
+    	this.load.atlasJSONHash('player', 'assets/player_json-daka.png', 'assets/player_json.json');
     	/*this.load.atlasJSONHash('bird', 'assets/bird_json.png', 'assets/bird_json.json');*/
     	
       this.load.start();
