@@ -23,16 +23,16 @@
 	<div id="game" style="height: 603px;overflow: hidden;"></div>
   <script>
     var game = new Phaser.Game(750, 1206, Phaser.CANVAS, 'game');
-    game.state.add('Boot', MyGame.Boot);
-    game.state.add('Preloader', MyGame.Preloader);
-    game.state.add('MainMenu', MyGame.MainMenu);
-    game.state.add('MyLotto', MyGame.MyLotto);
-    game.state.add('Rank', MyGame.Rank);
-    game.state.add('Game', MyGame.Game);
-    game.state.add('Result', MyGame.Result);
-    // setTimeout(() => {
-      game.state.start('Boot');
-    // }, 500);
+
+    game.state.add('Boot', MyGame.Boot); // Boot初始启动
+    game.state.add('Preloader', MyGame.Preloader); // 预加载文件
+    game.state.add('MainMenu', MyGame.MainMenu); // 主菜单：开始游戏、我的奖品、排行榜
+    game.state.add('MyLotto', MyGame.MyLotto); // 我的奖品
+    game.state.add('Rank', MyGame.Rank); // 排行榜
+    game.state.add('Game', MyGame.Game); // 游戏主体
+    game.state.add('Result', MyGame.Result); // 结果页
+    game.state.start('Boot'); // 初始化启动start
+    
   </script>
 </body>
 </html>
