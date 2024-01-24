@@ -89,7 +89,7 @@ MyGame.Game.prototype = {
     if(!this.player.jump && this.gameRun)
     {
       this.player.body.velocity.y = -1000;
-      game.add.tween(this.player).to({angle:-30}, 100, Phaser.Easing.Linear.None, true,0);
+      game.add.tween(this.player).to({angle:-10}, 100, Phaser.Easing.Linear.None, true,0);
       if(this.doubleJump>=1)
       {
         this.player.jump = true;
