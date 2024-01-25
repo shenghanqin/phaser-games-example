@@ -1,5 +1,6 @@
 var GameUI = ( function (mod){
 
+    // ？？？
     mod.cutscenes = function(){
         game.graphics = game.add.graphics(0, 0);
         game.graphics.beginFill(0x0000);
@@ -10,6 +11,8 @@ var GameUI = ( function (mod){
         },this);
     };
     
+
+    // 加载底部bar的分数？
     mod.Game_element = function(){
     	var scoreBar = game.add.sprite(game.world.width/2,game.world.height - 153,'ico');
     	scoreBar.anchor.set(0.5,0);
